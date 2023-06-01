@@ -18,7 +18,7 @@ public class PlayerControls : MonoBehaviour {
 
     //Bu metodları yapmamızın nedeni inputsystem i sadece ihtiyacıız olduğunda kullanabilmek içindir.
     void OnEnable() {    // Yeni inputSystem i kullanmak için etkinleştirmemiz gerekir.
-        
+
         movement.Enable();// Yeni inputsystem i etkinleştirir.
     }
 
@@ -37,10 +37,14 @@ public class PlayerControls : MonoBehaviour {
 
 
         //Yeni input system kullanımı
-        float horizontalThrow = movement.ReadValue<Vector2>().x;
-        float verticalThrow = movement.ReadValue<Vector2>().y;
+        float xThrow = movement.ReadValue<Vector2>().x;
+        float yThrow = movement.ReadValue<Vector2>().y;
 
-        Debug.Log(horizontalThrow);
-        Debug.Log(verticalThrow);
+        float xOffset = 1f;
+        float newXPos = transform.localPosition.x + xOffset;
+
+        gameObject.transform.localPosition = new Vector3(newXPos , gameObject.transform.localPosition.y , gameObject.transform.localPosition.z);
+
+
     }
 }
