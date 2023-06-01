@@ -12,6 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8309ca21b45cfbc45845fd37a941ffdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement:
+    m_Name: Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4111bc48-8619-44ec-986d-e1d3e8ce7494
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 9585e68e-d00c-40e2-9847-f1b9889cec6b
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: d7f8efe7-f20e-49ff-8d0c-d76a26e99454
+      m_Path: <Keyboard>/#(W)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: a3099837-f1ed-4c9c-af59-5f8bd5ba0f9f
+      m_Path: <Keyboard>/#(S)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: eb8a6859-8468-46fe-9113-68b160f82c9b
+      m_Path: <Keyboard>/#(A)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: d668162d-d650-41e5-b141-dac509c73d0a
+      m_Path: <Keyboard>/#(D)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+  controlSpeed: 30
 --- !u!1001 &2524970833023769023
 PrefabInstance:
   m_ObjectHideFlags: 0

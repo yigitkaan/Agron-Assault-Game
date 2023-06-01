@@ -9,6 +9,7 @@ public class PlayerControls : MonoBehaviour {
 
 
     [SerializeField] InputAction movement; //Yeni input system kullanımı için.
+    [SerializeField] float controlSpeed = 10f;
 
     // Start is called before the first frame update
     void Start() {
@@ -40,10 +41,13 @@ public class PlayerControls : MonoBehaviour {
         float xThrow = movement.ReadValue<Vector2>().x;
         float yThrow = movement.ReadValue<Vector2>().y;
 
-        float xOffset = 1f;
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
         float newXPos = transform.localPosition.x + xOffset;
 
-        gameObject.transform.localPosition = new Vector3(newXPos , gameObject.transform.localPosition.y , gameObject.transform.localPosition.z);
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
+        float newYPos = transform.localPosition.y + yOffset;
+
+        gameObject.transform.localPosition = new Vector3(newXPos , newYPos , gameObject.transform.localPosition.z);
 
 
     }
