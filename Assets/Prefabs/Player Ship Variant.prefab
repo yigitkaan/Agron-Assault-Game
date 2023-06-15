@@ -61,6 +61,7 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 8
   controlSpeed: 30
+  xRange: 10
 --- !u!1001 &2524970833023769023
 PrefabInstance:
   m_ObjectHideFlags: 0
