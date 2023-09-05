@@ -625,6 +625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342286386}
     m_Modifications:
+    - target: {fileID: 825016530, guid: 5384eaffdeb9e484f8020d54f9434e47, type: 3}
+      propertyPath: controlRollFactor
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 1846294044600316445, guid: 5384eaffdeb9e484f8020d54f9434e47, type: 3}
       propertyPath: m_Name
       value: Player Ship
